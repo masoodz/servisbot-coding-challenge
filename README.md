@@ -2,6 +2,10 @@
 
 This project is a **full-stack application** that provides a **bot management dashboard** with a **React + TypeScript** frontend and an **Express + TypeScript** backend. The application allows users to **view bots, workers, and logs** with **pagination support**.
 
+## 📸 Preview
+
+![App Preview](./preview.png)
+
 ## 🛠️ **Setup & Installation**
 
 ### **Backend**
