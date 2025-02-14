@@ -12,7 +12,7 @@ This project is a **full-stack application** that provides a **bot management da
 
 The backend is a **Node.js Express API** that serves bots, workers, and logs with **pagination support**.
 
-📌 **See [`backend/README.md`](./backend/README.md) for backend setup instructions.**
+📌 **See [`backend/README.MD`](./backend/README.MD) for backend setup instructions.**
 
 ### **Frontend**
 
