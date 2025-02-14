@@ -124,8 +124,6 @@ const Dashboard = () => {
       field: "created",
       headerName: "Created",
       width: 180,
-      valueGetter: (value) =>
-        value ? new Date(value).toLocaleString() : "N/A",
     },
   ];
 
