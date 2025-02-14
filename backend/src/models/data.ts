@@ -8,7 +8,19 @@ function readJsonFile<T>(fileName: string): T {
   return JSON.parse(fileData) as T;
 }
 
-export const getBots = (): Bot[] => readJsonFile<Bot[]>("bots.json");
-export const getWorkers = (): Worker[] =>
-  readJsonFile<Worker[]>("workers.json");
-export const getLogs = (): Log[] => readJsonFile<Log[]>("logs.json");
+let cachedBots: Bot[] = [];
+let cachedWorkers: Worker[] = [];
+let cachedLogs: Log[] = [];
+
+function loadCache() {
+  cachedBots = readJsonFile<Bot[]>("bots.json");
+  cachedWorkers = readJsonFile<Worker[]>("workers.json");
+  cachedLogs = readJsonFile<Log[]>("logs.json");
+  console.log("Data cache initialized");
+}
+
+loadCache();
+
+export const getBots = (): Bot[] => cachedBots;
+export const getWorkers = (): Worker[] => cachedWorkers;
+export const getLogs = (): Log[] => cachedLogs;
